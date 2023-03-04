@@ -28,9 +28,9 @@ exports.registerUser = asyncHandler(async (req, res, next) => {
     phone,
     password,
     avatar: {
-      public_id: myCloud.public_id,
+      public_id: myCloud.public_id || 'this is a test',
       // public_id: 'this is a sample',
-      url: myCloud.secure_url,
+      url: myCloud.secure_url || 'this is a test',
       // url: 'this is a url',
     },
   });
